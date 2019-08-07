@@ -9,12 +9,15 @@
 		catch (PDOException $e){
 			echo 'Erro ao conectar com o MySQL:' . $e->getMessage();
 		}
-		return $conexao; 
+		return $conexao;
 	}
 
 	function obterProfessores(){
 		$conexao = obterConexao();
-		$sentenca = $conexao->query("select * from professor order by nome");
+		$sentenca = $conexao->query("select pro.id, pro.nome Professor, are.nome Area
+		from professor pro
+		join area are
+		on pro.id_area = are.id");
 		$professores = $sentenca->fetchAll(PDO::FETCH_ASSOC);
 
 		return $professores;

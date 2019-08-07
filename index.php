@@ -4,7 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +28,8 @@
 					echo "
 						<tr>
 							<td>{$professor['id']}</td>
-							<td>{$professor['nome']}</td>
-							<td>{$professor['area']}</td>
+							<td>{$professor['Professor']}</td>
+							<td>{$professor['Area']}</td>
 						</tr>
 					";
 				}
