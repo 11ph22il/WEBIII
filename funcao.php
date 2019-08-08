@@ -1,10 +1,10 @@
-<?php
-
+<?php /** @noinspection SqlResolve */
+	
 	function obterConexao(){
 		$conexao = NULL;
 		try{
 			$conexao = new PDO('mysql:host=localhost;dbname=web3','root','');
-			echo 'conectou';
+			// echo 'conectou';
 		}
 		catch (PDOException $e){
 			echo 'Erro ao conectar com o MySQL:' . $e->getMessage();
