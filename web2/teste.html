@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <script type="text/javascript">
+        var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              //console.log(this.responseText);
+              var objetos = JSON.parse(this.responseText);
+              console.log(objetos);
+            }
+          };
+          xhttp.open("GET", "obterProdutos.php", true);
+          xhttp.send();
+      </script>
+  </body>
+</html>

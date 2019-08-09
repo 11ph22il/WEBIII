@@ -3,4 +3,5 @@ select pro.id, pro.nome Professor, are.nome Area
 	join area are
 	on pro.id_area = are.id;
 
+
 select * from professor;

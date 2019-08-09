@@ -4,7 +4,9 @@
 		$conexao = NULL;
 		try{
 			$conexao = new PDO('mysql:host=localhost;dbname=web3','root','');
-			// echo 'conectou';
+			echo '
+				<script type="text/javascript">console.log(\'conectou\');</script>
+			';
 		}
 		catch (PDOException $e){
 			echo 'Erro ao conectar com o MySQL:' . $e->getMessage();
